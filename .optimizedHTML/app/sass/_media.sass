@@ -1,19 +1,54 @@
 @media (max-width : 1920px)
 	.section_descript
 		width: 700px
+
 @media (max-width : 1680px)
 	//
 @media (max-width : 1366px)
 	//
 @media (max-width : 1280px)
-	//
+	.card-trade
+		padding-left: 100px
+
+
 @media (max-width : 1024px)
-	//
+	.card-trade
+		padding-left: 30px
 
 @media (max-width : 800px)
 	//
 @media (max-width : 768px)
-	//
+	.boolit
+		&_row
+			grid-template-columns: repeat(3, 1fr)
+			grid-template-rows: repeat(2, 1fr)
+		&_item
+			&:nth-child(2),
+			&:nth-child(4),
+			&:nth-child(6)
+				background: $text-20
+			&:nth-child(3),
+			&:nth-child(5)
+				background: $text
+
+
+
+	.card-trade
+		&:nth-child(1)
+			grid-area: 1 / 2 / 2 / 4
+		&:nth-child(2)
+			grid-area: 1 / 4 / 2 / 6
+		&:nth-child(3)
+			grid-area:  2 / 2 / 3 / 4
+		&:nth-child(4)
+			grid-area:  2 / 4 / 3 / 6
+		&:nth-child(5)
+			grid-area: 3 / 3 / 4 / 5
+		&_block
+			grid-template-columns: 0px  repeat(4, 1fr) 0px
+		//	height: 300px
+
+
 @media (max-width : 600px)
 	//
 @media (max-width : 533px)

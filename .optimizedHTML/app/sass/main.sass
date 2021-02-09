@@ -90,7 +90,8 @@
 .section_boolit
 .boolit
 	&_row
-		display: flex
+		display: grid
+		grid-template-columns: repeat(6, 1fr)
 		background: $text
 	&_item
 		color: #fff
@@ -105,10 +106,10 @@
 		justify-content: center
 		&:nth-child(2),
 		&:nth-child(5)
-			background: #2D384F
+			background: $text-20
 		&:nth-child(3),
 		&:nth-child(6)
-			background: #454E62
+			background: $text-40 
 	&_title
 		font-size: 42px
 		font-weight: 600
@@ -137,33 +138,44 @@
 	&_header
 		text-align: center
 
+
 .card-trade
 	min-height: 340px
 	background: $text url("../images/bg-cart.svg") no-repeat left bottom
 	color: #fff
 	margin: 0 7.5px 15px
-	flex: 0 1 32.1%
-	padding: 50px 40px 50px 160px
+	padding: 50px 30px 50px 160px
 	border-radius: 8px
+	transition: all 0.4s
 	display: flex
 	flex-direction: column
 	justify-content: space-between
+	&:nth-child(1)
+		grid-area: 1 / 1 / 2 / 3
 	&:nth-child(2)
 		background-color: $accent
+		grid-area: 1 / 3 / 2 / 5
 	&:nth-child(3)
 		background-color: $yellow
-		color: $text
+		grid-area: 1 / 5 / 2 / 7
 	&:nth-child(4)
+		grid-area: 2 / 2 / 3 / 4
 		background: $birch  url("../images/bg-cart_accent.svg") no-repeat   left bottom
-		color: $text
 	&:nth-child(5)
+		grid-area: 2 / 4 / 3 / 6
 		background: $grey  url("../images/bg-cart_grey.svg") no-repeat      left bottom
+	&:nth-child(3),
+	&:nth-child(4),
+	&:nth-child(5)
 		color: $text
+		.btn
+			border-color: $text
+			color: $text
 	&_block
-		display: flex
+		display: grid
 		padding: 0  7.5px
-		flex-wrap: wrap
-		justify-content: center
+		grid-template-columns: repeat(6, 1fr)
+		grid-template-rows: repeat(2, 1fr)
 	&_header
 	&__title
 		font-size: 42px
@@ -174,22 +186,270 @@
 
 
 
+
 .section_our-platform
 	background: $text
 	text-align: center
 	.h2
 		color: #fff
+	.btn_card
+		color: $text
+		border-color: $text
+
 .our-platform
+	&_wrapper
+		display: grid
+		grid-template-columns: repeat(2, 1fr)
+		margin-top: 60px
+	&_card
+		&_item
+			background: #fff
+			border-radius: 8px
+			margin: 0 7.5px 15px
+			padding: 50px 30px 50px 160px
+			transition: all 0.4s
+			display: flex
+			flex-direction: column
+			justify-content: space-between
+			text-align: left
+			background: #fff  url("../images/bg-cart_f8.svg") no-repeat      left bottom
+			background-size: 32%
+			min-height: 510px
+			&_header
+				font-size: 42px
+				font-weight: 600
+			&_body
+			&_footer
+				display: flex
+		&_main
+	&_footer_link_block
+		display: flex
+		justify-content: center
+		align-items: center
+	&_footer_link
+		width: 30px
+		height: auto
+		margin: 0 15px
+		path
+			transition: all 0.4s
+		&:hover
+			path
+				fill: $accent-hover
+
+
+
+
+.accounts-provide
+	text-align: center
+	background: #f8f8f8
+	&_items
+		margin: 60px 0
+		display: grid
+		grid-template-columns: repeat(3, 1fr)
+		grid-template-rows: 1fr 30px
+	&_item
+		border-radius: 8px
+		box-shadow:  0px 0px 15px rgba(0, 0, 0, 0.25)
+		padding-bottom: 60px
+		background: #fff
+		&:nth-child(1)
+			.accounts-provide_item__head
+				background: $text
+		&:nth-child(2)
+			grid-area: 1 / 2 / 3 / 3
+			transform: scale(1.01)
+			.accounts-provide_item__head
+				background: $accent
+				transform: translateY(-30px)
+				height: 126px
+		&:nth-child(3)
+			.accounts-provide_item__head
+				background: $yellow
+		&__head
+			border-top-right-radius: 8px
+			border-top-left-radius: 8px
+			color: #fff
+			display: flex
+			align-items: center
+			justify-content: center
+			font-size: 30px
+			font-weight: 600
+			height: 96px
+			text-transform: uppercase
+			margin-bottom: 40px
+			&__inner
+		&_body
+			padding: 0 50px
+			text-align: left
+			margin-bottom: 40px
+		&_row
+			margin-bottom: 10px
+			&:last-child
+				border-bottom: 1px solid $grey
+				padding-bottom:  30px
+			span
+				display: inline-block
+				&:nth-child(1)
+					width: 70%
+				&:nth-child(2)
+					width: 25%
+
+
+		
+
+
+.section_why
+	text-align: center
+.why
+	&_wrapper
+		margin-top: 60px
+		display: grid
+		grid-template-columns: repeat(3, 1fr)
+		padding: 0 7.5px
+	&_card
+		&_item
+			height: 230px
+			display: flex
+			justify-content: center
+			align-items: center
+			margin: 0 7.5px
+			border-radius: 8px
+			padding: 15px 15px 15px 160px
+			text-align: left
+			&:nth-child(1)
+				background: $text url(../images/why-bg-1.svg) no-repeat 10% center
+			&:nth-child(2)
+				background: $accent url(../images/why-bg-2.svg) no-repeat 10% center
+			&:nth-child(3)
+				background: $yellow url(../images/why-bg-3.svg) no-repeat 10% center
+			&_title
+				color: #ffffff
+				font-size: 32px
+				font-weight: 700
+
+
+
+
+.trad-steps
+	text-align: center
+	.container
+		border-bottom: 1px solid $grey
+		padding-bottom: 80px
+	&_items
+		margin-top: 65px
+		text-align: center
+		overflow: hidden
+		.row
+			.col-md-3
+				&:last-child
+					.trad-steps_item__int:after
+						border: none
+				&:nth-child(1)
+					.trad-steps_item__int
+						background: $text
+				&:nth-child(2)
+					.trad-steps_item__int
+						background: $birch
+						color: $text
+				&:nth-child(3)
+					.trad-steps_item__int
+						background: $yellow
+				&:nth-child(4)
+					.trad-steps_item__int
+						background: $accent
+	&_item
+		position: relative
+		margin-bottom: 100px
+		&__int
+			height: 82px
+			width: 82px
+			background: $accent
+			color: #ffffff
+			display: block
+			border-radius: 50%
+			font-size: 30px
+			font-weight: 500
+			line-height: 86px
+			margin: 0 auto 30px
+			&:after
+				content: ''
+				width: 90%
+				height: 10px
+				position: absolute
+				top: 40px
+				right: 0
+				transform: translateX(50%)
+				border-top: 3px dotted #999
+				z-index: -1
+
+		&__title
+			font-size: 26px
+			font-weight: 500
+			margin-bottom: 10px
+		&__text
+
+
+
+
+			
+.section_accept
+	text-align: center
+.accept
+	&_img-block
+		margin-top: 40px
+	&_img
+		transition: all 0.4s
+		filter: grayscale(1)
+		&:hover
+			filter:  grayscale(0)
+
 	
 
 
 
 
 
+.footer
+	background:	$text
+	color: #ffffff
+	font-size: 14px
+	padding: 40px 0 0px
+	&_sub
+		background: $sub-footer
+		text-align: center
+		margin-top: 30px
+		padding: 25px 0 60px
+	&_link
+		color: #fff
+		text-transform: uppercase
+		font-size: 12px
+		display: inline-block
+		margin: 0 5px
+		border-right: 2px solid #fff
+		padding-right: 10px
+		&:last-child,
+		&:nth-child(4)
+			border: none
+	&_address
+		&_item
+			margin-bottom: 30px
+			display: grid
+			grid-template-columns: 40px 1fr
+		&__text
+			color: #ffffff
+	&__info
+		font-size: 12px
+		height: 200px
+		overflow: hidden
+		overflow-y: scroll
+		padding: 0 30px 0 60px
 
-
+	&_social
+		&__link:hover
+			path
+				transition: all 0.4s
+				fill: $accent
 
 
 @import secondary
-@import media        
-
+@import media  
