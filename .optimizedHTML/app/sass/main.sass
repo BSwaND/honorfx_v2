@@ -1,0 +1,195 @@
+@import vars
+@import fonts
+@import libs
+@import settings
+
+// Custom Sass / Remove before use
+.header
+	padding: 20px 0
+	&_top-line
+		margin-bottom: 20px
+		border-bottom: 1px solid  $border
+	&_control
+		text-align: right
+		padding: 10px 0 0
+		&__link
+			font-weight: 600
+			display: inline-block
+			margin: 0 20px 0 0px
+			background: url("../images/icon/arrow-down.svg") no-repeat right center
+			padding-right: 20px
+		&__btn-hamburger
+			display: none
+	&_logo
+		display: inline-block
+		margin-bottom: 20px
+		padding: 0 40px 0 0
+		img
+			height: 45px
+			width: auto
+	&_nav
+		padding: 0
+		li
+			display: inline-block
+		a
+			color: $text
+			font-weight: 600
+			padding: 20px 20px 20px 0
+			display: inline-block
+			margin: 0 25px 0 0
+			position: relative
+			&:after
+				position: absolute
+				width: 0%
+				height: 3px
+				background: $accent
+				left: 0
+				bottom: 20px
+				z-index: 10
+				content: ''
+				transition:  all 0.4s  ease-in-out
+			&:hover
+				&:after
+					right: 0
+					width: 90%
+		.active
+			a:after
+				width: 90%
+
+			
+.section_main-screen
+	background: url("../images/bg-1.svg") no-repeat right
+
+.main-screen
+	&_body
+		padding-top: 60px
+		.h1
+			.accent-color
+				display: block
+	&__decription
+		font-size: 18px
+		font-weight: 600
+		width: 190px
+	&_footer
+		background: #F8F8F8
+		text-align: center
+	&_main-img
+		transform: translateY(20px)
+
+
+
+
+
+.section
+	padding: 80px 0
+
+
+
+
+
+.section_boolit
+.boolit
+	&_row
+		display: flex
+		background: $text
+	&_item
+		color: #fff
+		display: flex
+		height: 250px
+		background: $text
+		text-align: center
+		flex: 0 0 16.7%
+		padding: 28px 0
+		align-items: center
+		flex-direction: column
+		justify-content: center
+		&:nth-child(2),
+		&:nth-child(5)
+			background: #2D384F
+		&:nth-child(3),
+		&:nth-child(6)
+			background: #454E62
+	&_title
+		font-size: 42px
+		font-weight: 600
+		position: relative
+		padding-bottom: 25px
+		&:after
+			display: block
+			position: absolute
+			left: 50%
+			bottom: 0
+			height: 2px
+			width: 35px
+			background: #394358
+			content: ''
+			transform: translateX(-50%)
+	&_text
+		padding-top: 25px
+		font-size: 24px
+		&__lite
+			font-size: 14px
+			display: block
+
+
+.section_what-trade
+.what-trade
+	&_header
+		text-align: center
+
+.card-trade
+	min-height: 340px
+	background: $text url("../images/bg-cart.svg") no-repeat left bottom
+	color: #fff
+	margin: 0 7.5px 15px
+	flex: 0 1 32.1%
+	padding: 50px 40px 50px 160px
+	border-radius: 8px
+	display: flex
+	flex-direction: column
+	justify-content: space-between
+	&:nth-child(2)
+		background-color: $accent
+	&:nth-child(3)
+		background-color: $yellow
+		color: $text
+	&:nth-child(4)
+		background: $birch  url("../images/bg-cart_accent.svg") no-repeat   left bottom
+		color: $text
+	&:nth-child(5)
+		background: $grey  url("../images/bg-cart_grey.svg") no-repeat      left bottom
+		color: $text
+	&_block
+		display: flex
+		padding: 0  7.5px
+		flex-wrap: wrap
+		justify-content: center
+	&_header
+	&__title
+		font-size: 42px
+		font-weight: 600
+	&__text
+	&_btn
+
+
+
+
+.section_our-platform
+	background: $text
+	text-align: center
+	.h2
+		color: #fff
+.our-platform
+	
+
+
+
+
+
+
+
+
+
+@import secondary
+@import media        
+
