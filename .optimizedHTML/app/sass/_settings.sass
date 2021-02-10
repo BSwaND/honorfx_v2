@@ -124,10 +124,27 @@ ul
 
 
 
+.hamburger-inner,
+.hamburger-inner::after,
+.hamburger-inner::before
+	width: 28px
 
 
-
-
-
-
-
+@mixin  btn_card_lite
+	border: none
+	color: $accent
+	text-decoration: underline
+	font-weight: 600
+	min-width: auto
+	min-height: auto
+	padding: 0  20px 0 0 
+	position: relative
+	&:after
+		display: block
+		width: 20px
+		height: 100%
+		top: 55%
+		right: 0
+		content: '>>'
+		position: absolute
+		transform: translateY(-50%)

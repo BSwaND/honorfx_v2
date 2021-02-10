@@ -37,13 +37,40 @@ html, body, div, *
 		font-weight: 500
 
 
+.bb
+	border-bottom: 1px solid $grey
+
 
 .accent-color
 	color: $accent
-
+.line-accent-left
+	border-left: 2px solid $accent
+	padding-left: 10px
 
 
 .section_descript
 	font-size: 18px
 	color: #999
 	margin: 20px auto 20px
+
+
+
+.ul_custom
+	margin-bottom: 30px
+	padding: 0
+	&__li
+		list-style-type: none
+		padding: 0px 0 0 20px
+		position: relative
+		margin-bottom: 20px
+		font-size: 18px
+		&:before
+			content: ""
+			width: 9px
+			height: 9px
+			background: $accent
+			position: absolute
+			border-radius: 50%
+			left: 0
+			top: 50%
+			transform: translateY(-50%)

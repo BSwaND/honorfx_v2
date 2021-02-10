@@ -15,4 +15,12 @@ document.addEventListener("DOMContentLoaded", function() {
 	});
 
 
+	jQuery('.hamburger').click(function (){
+		jQuery(this).toggleClass('is-active');
+		jQuery('.header .header_nav').fadeToggle(400);
+	})
+
+	new WOW().init();
+
+
 });

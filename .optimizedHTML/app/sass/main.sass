@@ -5,7 +5,7 @@
 
 // Custom Sass / Remove before use
 .header
-	padding: 20px 0
+	padding: 20px 0   0
 	&_top-line
 		margin-bottom: 20px
 		border-bottom: 1px solid  $border
@@ -15,8 +15,8 @@
 		&__link
 			font-weight: 600
 			display: inline-block
-			margin: 0 20px 0 0px
-			background: url("../images/icon/arrow-down.svg") no-repeat right center
+			margin: 0 20px 0 0
+			//background: url("../images/icon/arrow-down.svg") no-repeat right center
 			padding-right: 20px
 		&__btn-hamburger
 			display: none
@@ -40,7 +40,7 @@
 			position: relative
 			&:after
 				position: absolute
-				width: 0%
+				width: 0
 				height: 3px
 				background: $accent
 				left: 0
@@ -75,6 +75,7 @@
 		text-align: center
 	&_main-img
 		transform: translateY(20px)
+		transition: all 0.4s
 
 
 
@@ -173,7 +174,7 @@
 			color: $text
 	&_block
 		display: grid
-		padding: 0  7.5px
+		grid-gap: 7.5px
 		grid-template-columns: repeat(6, 1fr)
 		grid-template-rows: repeat(2, 1fr)
 	&_header
@@ -212,21 +213,26 @@
 			flex-direction: column
 			justify-content: space-between
 			text-align: left
-			background: #fff  url("../images/bg-cart_f8.svg") no-repeat      left bottom
+			background: #fff  url("../images/bg-cart_f8.svg") no-repeat  left bottom
 			background-size: 32%
 			min-height: 510px
 			&_header
+				display: flex
 				font-size: 42px
 				font-weight: 600
+				.our-platform_link_block
+					display: none
 			&_body
 			&_footer
 				display: flex
 		&_main
-	&_footer_link_block
-		display: flex
-		justify-content: center
-		align-items: center
-	&_footer_link
+	&_link
+		&_block
+			display: flex
+			flex: 1 0 auto
+			justify-content: center
+			align-items: center
+	&__link
 		width: 30px
 		height: auto
 		margin: 0 15px
@@ -249,7 +255,7 @@
 		grid-template-rows: 1fr 30px
 	&_item
 		border-radius: 8px
-		box-shadow:  0px 0px 15px rgba(0, 0, 0, 0.25)
+		box-shadow:  0 0 15px rgba(0, 0, 0, 0.25)
 		padding-bottom: 60px
 		background: #fff
 		&:nth-child(1)
@@ -305,7 +311,7 @@
 		margin-top: 60px
 		display: grid
 		grid-template-columns: repeat(3, 1fr)
-		padding: 0 7.5px
+		grid-gap: 7.5px
 	&_card
 		&_item
 			height: 230px
@@ -413,7 +419,7 @@
 	background:	$text
 	color: #ffffff
 	font-size: 14px
-	padding: 40px 0 0px
+	padding: 40px 0 0
 	&_sub
 		background: $sub-footer
 		text-align: center
@@ -451,5 +457,11 @@
 				fill: $accent
 
 
+
+@import about
+
+
+
 @import secondary
-@import media  
+@import animate
+@import media
