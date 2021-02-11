@@ -30,6 +30,7 @@
 		<position>header</position>
 		<position>breadcrumbs</position>
 		<position>footer</position>
+		<position>footer_social</position>
 	</positions>
 	<languages folder="language">
 		<language tag="en-GB">language/en-GB/en-GB.tpl_custom.ini</language>
