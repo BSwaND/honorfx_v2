@@ -1,0 +1,152 @@
+.platform
+	&_section
+		.section_descript
+			font-size: 18px
+			color: $text
+
+	&_wrapper
+
+	&_item
+		padding: 80px 0 160px
+		font-size: 18px
+		&_desc
+			font-size: 20px
+			margin: 20px 0 
+		.ul_custom
+			font-weight: 600
+			&__li
+				margin-bottom: 10px
+				&:before
+					background: $text
+	&_mt4
+		position: relative
+		background: $grey-2
+		.download-dashboard
+			position: absolute
+			bottom: 0
+			left: 50%
+			transform: translate(-50%, 50%)
+
+	&_mt5
+		padding: 260px 0 80px
+		
+		
+		
+	&_step
+		&_section
+			background: url(../images/bg-8.jpg) no-repeat center/cover
+			text-align: center
+			color: #fff
+
+	&_platrading-step
+		display: grid
+		grid-template-columns: repeat(4, 1fr)
+		color: #fff
+		&_item
+			padding: 30px
+			margin-bottom: 30px
+			&_bod
+			&__title
+				font-weight: 600
+				font-size: 24px
+				margin: 10px 0
+			&__text
+				color: #C9C9C9
+				font-size: 16px
+
+
+
+
+
+
+
+
+
+
+
+
+.table-platform
+	display: grid
+	grid-template-columns: repeat(3, 1fr)
+	grid-template-rows: auto repeat(19 , 64px)
+	grid-row-gap: 4px
+	.table-custom_col_body_td
+		text-align: center
+		padding: 5px 10px
+		display: flex
+		align-items: center
+		justify-content: center
+		flex-direction: column
+	.table-custom_col_body_th
+		margin-right: 4px
+		padding-left: 40px
+		display: flex
+		align-items: center
+		justify-content: flex-start
+	.table-custom_td__head
+		margin: 0 0 8px
+
+
+
+
+
+
+
+
+
+// MEDIA
+@media (max-width : 1920px)
+	//
+@media (max-width : 1680px)
+	//
+@media (max-width : 1366px)
+	//
+@media (max-width : 1280px)
+	//
+@media (max-width : 1024px)
+	.table-platform
+		grid-template-rows: auto 
+@media (max-width : 800px)
+	//
+@media (max-width : 768px)
+	.platform_platrading-step
+		grid-template-columns: repeat(2, 1fr)
+
+@media (max-width : 600px)
+	//
+@media (max-width : 533px)
+	.platform_platrading-step
+		&_item
+			padding: 10px
+			&__title
+				font-size: 18px
+			&__text
+				font-size: 16px
+
+@media (max-width : 360px)
+	//
+@media (max-width : 320px)
+	//
+
+@media (min-width : 320px)
+	//
+@media (min-width : 360px)
+	//
+@media (min-width : 533px)
+	//
+@media (min-width : 600px)
+	//
+@media (min-width : 768px)
+	//
+@media (min-width : 800px)
+	//
+@media (min-width : 1024px)
+	//
+@media (min-width : 1280px)
+	//
+@media (min-width : 1366px)
+	//
+@media (min-width : 1680px)
+	//
+@media (min-width : 1920px)
+	//

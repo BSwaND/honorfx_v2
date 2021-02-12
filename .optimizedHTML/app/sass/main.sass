@@ -108,9 +108,13 @@
 		&:nth-child(2),
 		&:nth-child(5)
 			background: $text-20
+			.boolit_title:after
+				background: #4C5669
 		&:nth-child(3),
 		&:nth-child(6)
-			background: $text-40 
+			background: $text-40
+			.boolit_title:after
+				background: #61697A
 	&_title
 		font-size: 42px
 		font-weight: 600
@@ -338,6 +342,7 @@
 
 .trad-steps
 	text-align: center
+	padding-bottom: 0
 	.container
 		border-bottom: 1px solid $grey
 		padding-bottom: 80px
@@ -488,14 +493,15 @@
 			overflow: hidden
 			overflow-x: auto
 			&_th
-				padding: 20px
+				padding: 20px 30px
 				background: $text
 				color: #fff
 				font-weight: 400
+				line-height: 18px
 
 
 			&_td
-				padding: 20px 
+				padding: 20px 30px
 				background: #fff
 				&:nth-child(1)
 					background: $accent
@@ -512,7 +518,7 @@
 		grid-row-start: 13
 		grid-row-end:  15
 	&__trad-rol-2
-		height: 90px
+	//	height: 90px
 
 
 	&_section
@@ -520,8 +526,68 @@
 
 
 
+.download-dashboard
+	background: $accent
+	color: #fff
+	max-width: 452px
+	font-weight: 500
+	font-size: 18px
+	text-align: center
+	padding: 13px 40px  40px
+	&__title
+		margin-bottom: 20px
+		font-weight: 600
+		line-height: 22px
+	&_body
+		display: grid
+		grid-template-columns: repeat(2, 1fr)
+
+		&__col
+			display: grid
+			grid-template-columns: repeat(2, 1fr)
+			&:first-child
+				border-right: 1px solid #F19062
+
+	&__link
+		color: #fff
+		margin: 0 10px
+		span
+			display: block
+			margin-top: 10px
+			font-size: 14px
+		&:hover
+			color: $text
+			path
+				fill: $text
+				transition: all 0.4s
+
+
+
+
+
+	.text-color
+		display: block
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @import about
 @import account-type
+@import platform
 
 
 

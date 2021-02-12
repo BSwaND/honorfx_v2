@@ -52,6 +52,7 @@
 	<link rel="icon" type="image/png" href="/templates/<?php echo $this->template; ?>/icon/favicon.ico"/>
 	
 	<jdoc:include type="head"/>
+	<meta name="theme-color" content="#EE743B">
 </head>
 <body class="<?php echo $pageclass ? htmlspecialchars($pageclass) : 'default'; ?>">
 <header class="header">

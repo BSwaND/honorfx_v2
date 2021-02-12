@@ -34,7 +34,7 @@ gulp.task('styles', function() {
 	.pipe(concat('styles.min.css'))
 	.pipe(autoprefixer({
 		grid: true,
-		overrideBrowserslist: ['last 15 versions']
+		overrideBrowserslist: ['last 10 versions']
 	}))
 	.pipe(cleancss( {level: { 1: { specialComments: 0 } } })) // Optional. Comment out when debugging
 	.pipe(gulp.dest('app/css'))
@@ -47,6 +47,7 @@ gulp.task('scripts', function() {
 		// 'node_modules/jquery/dist/jquery.min.js', // Optional jQuery plug-in (npm i --save-dev jquery)
 		'app/js/_libs.js', // JS libraries (all in one)
 		'node_modules/owl.carousel/dist/owl.carousel.js',
+		//'node_modules/smooth-scrollbar/dist/smooth-scrollbar.js',
 		'app/js/_custom.js', // Custom scripts. Always at the end
 		])
 	.pipe(concat('scripts.min.js'))
