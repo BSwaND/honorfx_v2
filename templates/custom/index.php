@@ -42,6 +42,10 @@
 ');
 	
 	include_once(JPATH_BASE . '/templates/custom/html/geo_location.php');
+	include_once(JPATH_BASE . '/templates/custom/html/ib-cooke.php');
+	
+	
+	
 ?>
 
 

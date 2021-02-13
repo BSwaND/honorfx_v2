@@ -525,6 +525,43 @@
 		background: #e8e8e8
 
 
+.table-lite
+	display: grid
+	grid-template-columns: minmax(110px, 110px) minmax(170px, 170px) repeat(2, 1fr)
+	box-shadow: 5px 9px 13px #00000029
+	font-size: 14px
+	background: #F8F8F8
+	max-width: 560px
+	padding-bottom: 20px
+	&_ht
+		padding: 20px 10px 20px 20px
+		background: $text
+		color: #fff
+		font-weight: 600
+		span
+			color: #E3E6EC
+			font-size: 12px
+			display: block
+			opacity: .5
+			font-weight: 400
+	&_td
+		padding: 5px 25px 5px
+		font-weight: 600
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .download-dashboard
 	background: $accent
@@ -568,7 +605,28 @@
 	.text-color
 		display: block
 
+.bg-left
+	background: #fff url(../images/bg-left.svg) no-repeat center
+	background-position-x: right
+	background-size: contain
+.bg-right
+	background: #fff url(../images/bg-right.svg) no-repeat center
+	background-position-x: left
+	background-size: contain
 
+
+
+
+
+
+
+.contact
+	&_section
+		background: url(../images/bg-10.jpg) no-repeat center/cover
+		color: #fff
+		min-height: 289px
+		display: flex
+		align-items: center
 
 
 
@@ -588,6 +646,7 @@
 @import about
 @import account-type
 @import platform
+@import market
 
 
 
