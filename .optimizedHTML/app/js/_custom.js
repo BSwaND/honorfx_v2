@@ -23,6 +23,13 @@ document.addEventListener("DOMContentLoaded", function() {
 	new WOW().init();
 
 
+
+
+	jQuery('.table-custom-mobail_item').click(function (){
+		jQuery(this).find('.table-custom-mobail_item_body').toggleClass('table-custom-mobail_item_body__open')
+	})
+
+
 	// var Scrollbar = window.Scrollbar;
 	// Scrollbar.init(document.querySelector('#my-scrollbar'));
 

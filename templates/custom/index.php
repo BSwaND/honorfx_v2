@@ -1,6 +1,10 @@
 <?php
 	defined('_JEXEC') or die;
 	
+	include_once(JPATH_BASE . '/templates/custom/html/geo_location.php');
+	include_once(JPATH_BASE . '/templates/custom/html/ib-cooke.php');
+	
+	
 	$app = JFactory::getApplication();
 	$user = JFactory::getUser();
 	$this->setHtml5(true);
@@ -40,12 +44,7 @@
     <meta property="og:image" content="' . $image . '" />
     <meta property="og:url" content="' . JURI:: current() . '" />
 ');
-	
-	include_once(JPATH_BASE . '/templates/custom/html/geo_location.php');
-	include_once(JPATH_BASE . '/templates/custom/html/ib-cooke.php');
-	
-	
-	
+		
 ?>
 
 
@@ -57,8 +56,22 @@
 	
 	<jdoc:include type="head"/>
 	<meta name="theme-color" content="#EE743B">
+	
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-139622869-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+		
+		gtag('config', 'UA-139622869-1');
+	</script>
 </head>
 <body class="<?php echo $pageclass ? htmlspecialchars($pageclass) : 'default'; ?>">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NRJ983H"  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
 <header class="header">
 	<div class="header_top-line">
 		<div class="container">
@@ -78,7 +91,10 @@
 				<div class="col-sm-7">
 					<div class="header_control">
 				      <span class="header_control__link-block">
-					      <a href="<?= (!$document->locationThailand) ? '//my.honorfx.com/en/login' : '//portal.honorfx.com/login'?>" class="header_control__link popup-modal">Login</a>
+					      <?= (!$document->locationThailand) ? '' : '<a href="//portal.honorfx.com/login" class="header_control__link popup-modal" style="margin-bottom: 10px;">Client Login</a>'?>
+					      <a href="<?= (!$document->locationThailand) ? '//my.honorfx.com/en/login' : '//portal.honorfx.com/ib/login'?>" class="header_control__link popup-modal">
+						      <?= (!$document->locationThailand) ? 'Login' : 'IB Login'?>
+					      </a>
 					      <a href="<?= (!$document->locationThailand) ? '//my.honorfx.com/en/signup' : '//portal.honorfx.com/register'?>" class="btn btn_header popup-modal">Register</a>
 				      </span>
 					</div>
@@ -144,10 +160,10 @@
 							can afford to lose and should ensure that you fully understand the risks involved. Trading leveraged
 							products may not be suitable for all investors.Past performance is no guarantee of future results.It is
 							the
-							responsibility of the Client to ascertain whether he/she is permitted to use the services of the Honorfx
+							responsibility of the Client to ascertain whether he/she is permitted to use the services of the HonorFX
 							brand based on the legal requirements in his/her country of residence. Please read Honorfx’s full Risk
 							Disclosure. </p><br>
-						<p>Regional restrictions: Honorfx brand does not provide services to residents of the USA, Japan,
+						<p>Regional restrictions: HonorFX brand does not provide services to residents of the USA, Japan,
 							British Columbia, Mauritius, Quebec and FATF black listed countries. Find out more in the Regulations
 							section of our FAQs. </p>
 					</div>
@@ -175,6 +191,16 @@
 				fill="#EE743B"/>
 	</svg>
 </div>
+
+
+<!-- Start of LiveChat (www.livechatinc.com) code -->
+<script>
+	window.__lc = window.__lc || {};
+	window.__lc.license = 12424659;
+	;(function(n,t,c){function i(n){return e._h?e._h.apply(null,n):e._q.push(n)}var e={_q:[],_h:null,_v:"2.0",on:function(){i(["on",c.call(arguments)])},once:function(){i(["once",c.call(arguments)])},off:function(){i(["off",c.call(arguments)])},get:function(){if(!e._h)throw new Error("[LiveChatWidget] You can't use getters before load.");return i(["get",c.call(arguments)])},call:function(){i(["call",c.call(arguments)])},init:function(){var n=t.createElement("script");n.async=!0,n.type="text/javascript",n.src="https://cdn.livechatinc.com/tracking.js",t.head.appendChild(n)}};!n.__lc.asyncInit&&e.init(),n.LiveChatWidget=n.LiveChatWidget||e}(window,document,[].slice))
+</script>
+<noscript><a href="https://www.livechatinc.com/chat-with/12424659/" rel="nofollow">Chat with us</a>, powered by <a href="https://www.livechatinc.com/?welcome" rel="noopener nofollow" target="_blank">LiveChat</a></noscript>
+<!-- End of LiveChat code -->
 
 <script src="/templates/<?php echo $this->template; ?>/js/scripts.min.js"></script>
 <script src="/templates/<?php echo $this->template; ?>/js/custom.js"></script>

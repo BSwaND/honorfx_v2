@@ -469,92 +469,6 @@
 
 
 
-.table-custom
-	display: grid
-	grid-template-columns: 1fr 4fr
-	grid-template-rows: auto
-	grid-auto-rows: minmax(64px, 64px)
-	grid-gap: 4px
-	&_col
-		&_head
-			display: grid
-			grid-template-columns: repeat(1, 1fr)
-			grid-template-rows: auto
-			grid-auto-rows:  minmax(64px, 64px)
-			grid-gap: 4px
-			font-size: 16px
-			font-weight: 600
-		&_body
-			display: grid
-			grid-template-columns: repeat(3 , 1fr)
-			grid-template-rows: auto
-			grid-auto-rows: minmax(64px, 64px)
-			grid-gap: 4px
-			overflow: hidden
-			overflow-x: auto
-			&_th
-				padding: 20px 30px
-				background: $text
-				color: #fff
-				font-weight: 400
-				line-height: 18px
-
-
-			&_td
-				padding: 20px 30px
-				background: #fff
-				&:nth-child(1)
-					background: $accent
-	&_td__head
-		background: $accent
-		color: #fff
-		height: 90px
-		padding-top: 35px
-		font-weight: 500
-		font-size: 20px
-
-	&__trad-rol-1
-		height: auto
-		grid-row-start: 13
-		grid-row-end:  15
-	&__trad-rol-2
-	//	height: 90px
-
-
-	&_section
-		background: #e8e8e8
-
-
-.table-lite
-	display: grid
-	grid-template-columns: minmax(110px, 110px) minmax(170px, 170px) repeat(2, 1fr)
-	box-shadow: 5px 9px 13px #00000029
-	font-size: 14px
-	background: #F8F8F8
-	max-width: 560px
-	padding-bottom: 20px
-	&_ht
-		padding: 20px 10px 20px 20px
-		background: $text
-		color: #fff
-		font-weight: 600
-		span
-			color: #E3E6EC
-			font-size: 12px
-			display: block
-			opacity: .5
-			font-weight: 400
-	&_td
-		padding: 5px 25px 5px
-		font-weight: 600
-			
-
-
-
-
-
-
-
 
 
 
@@ -622,25 +536,81 @@
 
 .contact
 	&_section
-		background: url(../images/bg-10.jpg) no-repeat center/cover
+		background: #1F2B41 url(../images/bg-10.jpg) no-repeat bottom/cover
 		color: #fff
-		min-height: 289px
+		min-height: 330px
 		display: flex
 		align-items: center
 
+	&_bulit
+		&_wrapper
+			text-align: center
+			padding-bottom: 80px
+		&_body
+		&__title
+			font-size: 24px
+			font-weight: 700
+		&__link
+			font-size: 16px
+			color: #4592DE
+			cursor: pointer
+			margin-bottom: 30px
+			display: inline-block
+
+
+.visit
+	&_item
+		margin: 0 30px
+		text-align: center
+		&:nth-child(6),
+		&:nth-child(7)
+			color: $accent
+			.visit_item_bol
+				background: $grey-2
+		&_wrapper
+			display: grid
+			grid-template-columns: repeat(7, 1fr)
+			max-width: 600px
+			margin: 0 auto 140px
+		&title
+			text-transform: uppercase
+			color: #707070
+
+		&_bol
+			box-shadow: 0px 3px 6px #00000038
+			height: 23px
+			width: 23px
+			border-radius: 50%
+			background: $text
+			margin: 10px auto
 
 
 
 
 
+.page-404
+	&_main-screen
+		background: url(../images/bg-11.svg) no-repeat right
+		&__foter
+			background: url(../images/bg-404.svg) no-repeat right
+		&_descript
+			font-size: 24px
+			color: $accent
+			margin-bottom: 30px
+			font-weight: 700
+
+
+		.h1
+			font-size: 128px
+			font-weight: 700
+			line-height: 120px
+		&_descript
 
 
 
 
 
-
-
-
+@import tables
 
 
 @import about
@@ -649,7 +619,8 @@
 @import market
 
 
-
 @import secondary
 @import animate
+
+
 @import media

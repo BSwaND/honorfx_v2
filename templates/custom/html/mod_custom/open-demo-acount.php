@@ -21,7 +21,7 @@ defined('_JEXEC') or die;
 		<div class="container">
 			<h2 class="h2">Open Live Acount or <br /><span class="accent-color">Demo Acount</span></h2>
 			<div class="section_descript">Unlock your trading potential</div>
-			<div class="about_open-account_wrapper-card">
+			<div class="about_open-account_wrapper-card wow fadeInUp" data-wow-duration="2s">
 				<div class="row">
 					<div class="col-md-4">
 						<div class="about_open-account_card">

@@ -1,9 +1,15 @@
+@media (max-width : 2560px)
+	.contact_section
+		min-height: 450px
+		
 @media (max-width : 1920px)
 	.section_descript
 		width: 700px
 
+
 @media (max-width : 1680px)
-	//
+	.contact_section
+		min-height: 289px
 @media (max-width : 1366px)
 	//
 @media (max-width : 1280px)
@@ -167,6 +173,12 @@
 			width: 100%
 			
 
+
+
+	.visit
+		&_item
+			&_wrapper
+				grid-template-columns: repeat(5, 1fr)
 
 
 
@@ -337,6 +349,21 @@
 	.main-screen-body
 		.h1
 			font-size: 28px
+
+
+
+	.visit
+		&_item
+			&:nth-child(6)
+				grid-area: 5/1 / 5/2
+
+				border-top: 1px solid $grey-2
+			&:nth-child(7)
+				grid-area: 5/2 / 5/3
+
+				border-top: 1px solid $grey-2
+			&_wrapper
+				grid-template-columns: repeat(2, 1fr)
 
 
 @media (max-width : 360px)

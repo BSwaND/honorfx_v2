@@ -4,17 +4,19 @@
 		require_once(JPATH_BASE . '/templates/custom/crypt/Aes.php');
 		require_once(JPATH_BASE . '/templates/custom/crypt/Aesctr.php');
 		$encryption_key = 'honorfx.com';
+		//$encryption_key = 'honorfx-v2.u.org.ua';
 		
 		$aesctr = str_replace(['-', '_', '*', '.'], ['+', '/', '=', ','], $_GET['k']);
 		$decrypt = Aesctr::decrypt($aesctr, $encryption_key, 256);
+		
 		$user_id = number_format($decrypt, 0);
 		
 		$now_date = date("Y-m-d H:i:s");
 		$date_half_year = time() + (strtotime('1 year')-time())/2;
 		
-		$reg_first_user = md5('bonus.?IB?.first_user.reg_link');
+		$reg_first_user = md5('bonus.?IB?.first_user.reg_link');                
 		$reg_first_user_date = md5('bonus.?IB?.first_user.reg_link.date');
-		
+		                                                                                          
 		$reg_second_user = md5('bonus.?IB?.second_user.reg_link');
 		$reg_second_user_date = md5('bonus.?IB?.second_user.reg_link.date');
 		
@@ -25,12 +27,16 @@
 				$date_year = strtotime($_COOKIE[$reg_first_user_date]) + (strtotime('1 year')-time());
 				
 				setcookie($reg_second_user, $user_id, $date_year, '/', 'honorfx.com');
+				//setcookie($reg_second_user, $user_id, $date_year, '/', 'honorfx-v2.u.org.ua');
 				setcookie($reg_second_user_date, $now_date, $date_year, '/', 'honorfx.com');
+				//setcookie($reg_second_user_date, $now_date, $date_year, '/', 'honorfx-v2.u.org.ua');
 			}
 		}else{
 			
 			setcookie($reg_first_user, $user_id, $date_half_year, '/', 'honorfx.com');
+			//setcookie($reg_first_user, $user_id, $date_half_year, '/', 'honorfx-v2.u.org.ua');
 			setcookie($reg_first_user_date, $now_date, $date_half_year, '/', 'honorfx.com');
+			//setcookie($reg_first_user_date, $now_date, $date_half_year, '/', 'honorfx-v2.u.org.ua');
 		}
 		
 	}

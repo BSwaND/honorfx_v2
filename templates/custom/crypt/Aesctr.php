@@ -126,6 +126,7 @@ class Aesctr extends Aes
 
         // separate ciphertext into blocks (skipping past initial 8 bytes)
         $nBlocks = ceil((strlen($ciphertext) - 8) / $blockSize);
+        
         $ct = array();
         for ($b = 0; $b < $nBlocks; $b++) {
             $ct[$b] = substr($ciphertext, 8 + $b * $blockSize, 16);
@@ -152,11 +153,14 @@ class Aesctr extends Aes
                 $plaintxtByte[$i] = $cipherCntr[$i] ^ ord(substr($ciphertext[$b], $i, 1));
                 $plaintxtByte[$i] = chr($plaintxtByte[$i]);
             }
-            $plaintxt[$b] = implode('', $plaintxtByte);
+            $plaintxt[$b] = implode('', $plaintxtByte);      
         }
+        
+        
 
         // join array of blocks into single plaintext string
         $plaintext = implode('', $plaintxt);
+        
 
         return $plaintext;
     }

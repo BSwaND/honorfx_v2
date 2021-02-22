@@ -21,28 +21,28 @@ defined('_JEXEC') or die;
 			<div class="row">
 				<div class="offset-0 offset-lg-1 col-ld-10">
 					<div class="platform_platrading-step">
-						<div class="platform_platrading-step_item">
+						<div class="platform_platrading-step_item wow fadeInUp" data-wow-duration="1s">
 							<img class="platform_platrading-step__img" src="/images/platform/step-1.svg" alt="Start Trading">
 							<div class="platform_platrading-step_item_body">
 								<div class="platform_platrading-step_item__title">Register</div>
-								<div class="platform_platrading-step_item__text">Open your live trading account with HonorFx</div>
+								<div class="platform_platrading-step_item__text">Open your live trading account with HonorFX</div>
 							</div>
 						</div>
-						<div class="platform_platrading-step_item">
+						<div class="platform_platrading-step_item wow fadeInUp" data-wow-duration="1s">
 							<img class="platform_platrading-step__img" src="/images/platform/step-2.svg" alt="Start Trading">
 							<div class="platform_platrading-step_item_body">
 								<div class="platform_platrading-step_item__title">Verify</div>
 								<div class="platform_platrading-step_item__text">Upload your documents to verify your account</div>
 							</div>
 						</div>
-						<div class="platform_platrading-step_item">
+						<div class="platform_platrading-step_item wow fadeInUp" data-wow-duration="1s">
 							<img class="platform_platrading-step__img" src="/images/platform/step-3.svg" alt="Start Trading">
 							<div class="platform_platrading-step_item_body">
 								<div class="platform_platrading-step_item__title">Fund</div>
-								<div class="platform_platrading-step_item__text">Login your Client Portal and Fund your account</div>
+								<div class="platform_platrading-step_item__text">Login to your Client Portal and Fund your account</div>
 							</div>
 						</div>
-						<div class="platform_platrading-step_item">
+						<div class="platform_platrading-step_item wow fadeInUp" data-wow-duration="1s">
 							<img class="platform_platrading-step__img" src="/images/platform/step-4.svg" alt="Start Trading">
 							<div class="platform_platrading-step_item_body">
 								<div class="platform_platrading-step_item__title">Trade</div>
