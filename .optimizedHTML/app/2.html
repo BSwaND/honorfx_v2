@@ -65,6 +65,105 @@
 
 <main class="main">
 	
+	<!-- demo page		-->
+	<div class="demo-account">
+		<div class="container">
+			<div class="registration-block section__dafault">
+				<div class="container">
+					<h1 class="h2"><span class="accent-color">HonorFX</span><br>Demo Trading Account</h1>
+					<div class="section_descript">Trade CFDs on Forex, Metals, Indices and more in a <br> risk-free demo account</div>
+					
+					<form id="demo" class="registr-form  uForm" method="post">
+						<div class="row">
+							<div class="col-12 col-md-6">
+								<label class="label">First Name
+									<input id="reg-name" name="first-name" type="text" class="input" pattern="[A-Za-z\s]{2,60}" title="The name must not be less than 2 letters and without numbers" required>
+								</label>
+							</div>
+							<div class="col-12 col-md-6">
+								<label class="label">Last Name
+									<input id="reg-last-name" name="last-name" type="text" class="input" pattern="[A-Za-z\s]{2,60}" title="The last name must not be less than 2 letters and without numbers" required>
+								</label>
+							</div>
+							<div class="col-12">
+								<label class="label">E-mail
+									<input id="reg-email" name="email" type="email" class="input" title="Enter valid email" required>
+								</label>
+							</div>
+							<div class="col-12">
+								<label class="label">Mobile number
+									<input id="reg-phone" name="phone" type="tel" class="input" required>
+								</label>
+							</div>
+							
+							<div class="col-12 col-md-6">
+								<label class="label">Leverage
+									<div class="select-block_initialization select-block_initialization__col-row">
+										<select id="leverage" name="leverage" >
+											<option value="1:1">1:1</option>
+											<option value="1:50">1:50</option>
+											<option value="1:100">1:100</option>
+											<option value="1:200">1:200</option>
+											<option value="1:500">1:500</option>
+										</select>
+										<div class="select-block_btn"><span>1:1</span></div>
+									</div>
+								</label>
+							</div>
+							<div class="col-12 col-md-6">
+								<label class="label">Balance (USD)
+									<div class="select-block_initialization select-block_initialization__col-row">
+										<select id="balance"  name="balance">
+											<option value="100$">100$</option>
+											<option value="1000$">1000$</option>
+											<option value="5000$">5000$</option>
+											<option value="10000$">10000$</option>
+										</select>
+										<div class="select-block_btn"><span>100$</span></div>
+									</div>
+								</label>
+							</div>
+							
+							<div class="col-12 hidden-info-inputs d-none" style="display:none;">
+								<label class="label">Referrer Url
+									<input id="referrer_url" name="referrer_url" type="text">
+								</label>
+								<label class="label">Ib Id
+									<input id="ib_id" name="ib_id" type="text">
+								</label>
+							</div>
+							<div class="col-12 mt-2">
+								<label class="checkbox-custom__wrapper">
+									<input id="agree" type="checkbox" class="checkbox-custom" required checked>
+									<span class="checkbox-custom__box"></span>
+									<span>I agree that HonorFX may provide me with products, services, promotional and educational information by telephone, SMS or email.</span>
+								</label>
+							</div>
+							<div class="col-12 text-center">
+								<button type="submit" class="btn">Submit</button>
+							</div>
+						</div>
+					</form>
+				
+				</div>
+			</div>
+			<script>
+				fetch('https://api.sypexgeo.net/')
+						.then(response => response.json())
+						.then(data => {
+							//let country = data['country']['name_en'];
+							let code = '+'+data['country']['phone'];
+							jQuery('#reg-phone').val(code);
+						})
+						.catch(console.log);
+			</script>
+		</div>
+		
+	</div>
+
+		
+
+	
 	<!--  404 -->
 	<div class="page-404">
 		<div class="section page-404_main-screen text-center">

@@ -8,7 +8,8 @@
 input, textarea
 	outline: none
 	&:focus:required:invalid
-		border-color: red
+		border-color: $accent
+		padding-left: 10px
 	&:required:valid
 		border-color: green
 
@@ -47,6 +48,12 @@ h2, .h2
 ul
 	padding-left: 18px
 
+
+button
+	&.btn
+		padding-top: 0
+
+		
 .container-custom
 	max-width: 1940px
 	margin: auto
@@ -63,9 +70,9 @@ ul
 	font-size: 16px
 	padding-top: 8px
 	transition: all 0.4s
-	margin: 0 3px
+	margin: 0 3px 5px 3px
 	border: 1px solid transparent
-	margin-bottom: 5px
+	font-weight: 300
 	&_header
 		min-width: 130px
 	&_big
@@ -73,7 +80,7 @@ ul
 		min-height: 64px
 		padding-top: 16px
 		font-size: 21px
-		font-weight: 500
+		font-weight: 400
 		
 
 	&:hover
@@ -91,6 +98,30 @@ ul
 			background: transparentize(#eee, 0.2)
 			border-color: $accent-hover
 			color: $accent-hover
+
+		&__lite
+			border: none
+			color: $accent
+			text-decoration: none
+			font-weight: 600
+			min-width: auto
+			min-height: auto
+			padding: 0 20px 0 0
+			position: relative
+			&:after
+				display: block
+				width: 20px
+				height: 100%
+				top: 55%
+				right: 0
+				content: '>>'
+				position: absolute
+				transform: translateY(-50%)
+			&:hover
+				background: none
+				border-color: transparent
+				color: $accent-hover
+				box-shadow: none
 
 	&_color-text
 		background: transparent
@@ -165,3 +196,134 @@ ul
 		transform: translateY(-50%)
 
 
+		
+		
+		
+		
+		
+		
+.checkbox-custom
+	display: none !important
+	&__box
+		width: 14px
+		height: 14px
+		border: 1px solid $accent
+		border-radius: 3px
+		display: inline-block
+		background: #fff
+		flex: 0 0 14px
+		margin: 5px 5px 0 0
+
+/* Dafault */
+.checkbox-custom + .checkbox-custom__box
+	//
+
+/* Focus */
+.checkbox-custom:focus + .checkbox-custom__box
+ //
+
+/* Checked */
+.checkbox-custom:checked + .checkbox-custom__box
+	background: $accent
+
+/* Disabled */
+.checkbox-custom:disabled + .checkbox-custom__box
+ //
+
+.checkbox-custom:disabled:checked + .checkbox-custom__box
+	//
+
+
+
+//select-block_initialization
+.select-block
+	@mixin select-block_li-last-child
+		border-bottom: none
+		margin-bottom: 12px
+
+	&_initialization
+		position: relative
+		font-size: 14px
+		color: $text
+		select
+			display: none
+		&__col-row
+			.select-block_popap__li
+
+		&__row-border
+			li
+				border-bottom: 1px solid $grey-3
+				&:last-child
+					@include select-block_li-last-child
+		&__row-input
+			input
+				margin: 15px 12px
+				min-width: 180px
+			li:last-child
+				@include select-block_li-last-child
+			.select-block_btn
+				min-width: 170px
+		&__scrolling
+			.select-block_popap
+			padding: 0	14px
+			max-height: 200px
+			overflow-y: scroll
+		ul
+			padding: 0
+			margin: 0
+	&_btn
+		background: #ffffff
+		display: block
+		position: relative
+		border: 1px solid $grey-3
+		height: 49px
+		min-width: 60px
+		padding: 0 30px 0 15px
+		cursor: pointer
+		transition: all 0.4s
+		line-height: 49px
+		width: 100%
+		&:after
+			border-radius: 5px
+			content: ''
+			width: 30px
+			height: 40px
+			position: absolute
+			top: 3px
+			right: 0
+			text-align: center
+			background: url("../images/icon/l-arrow.svg") no-repeat center
+			transition: all 0.4s
+		&:hover
+			border-color: $grey-3
+		&__open
+			border-color: $grey-3
+			&:after
+				background: url("../images/icon/l-arrow-accent.svg") no-repeat center
+	&_popap
+		display: none
+		position: absolute
+		background: #ffffff
+		top: 60px
+		left: 0
+		z-index: 50
+		min-width: 40px
+		margin: 0
+		width: 100%
+		border: 1px solid $grey-3
+		&__li
+			display: block
+			transition: all 0.4s
+			padding: 7px 25px
+			white-space: nowrap
+			line-height: 17px
+			text-align: left
+			&:hover
+				background: $accent
+				color: #fff
+		&:before
+		&__none
+			display: none
+		&__active
+			display: block
+			opacity: 1

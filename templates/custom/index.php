@@ -66,6 +66,21 @@
 		
 		gtag('config', 'UA-139622869-1');
 	</script>
+	<!-- Yandex.Metrika counter -->
+	<script type="text/javascript" >
+		(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+			m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+		(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+		
+		ym(73195747, "init", {
+			clickmap:true,
+			trackLinks:true,
+			accurateTrackBounce:true,
+			webvisor:true
+		});
+	</script>
+	<noscript><div><img src="https://mc.yandex.ru/watch/73195747"; style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+	<!-- /Yandex.Metrika counter -->
 </head>
 <body class="<?php echo $pageclass ? htmlspecialchars($pageclass) : 'default'; ?>">
 <!-- Google Tag Manager (noscript) -->
@@ -135,7 +150,7 @@
 						</div>
 						<div class="footer_address_item">
 							<img src="images/icon/phone.svg" class="footer_address__marker">
-							<a href="+442032396011" class="footer_address__text">+442032396011</a>
+							<a href="tel:97142211811" class="footer_address__text">+97142211811</a>
 						</div>
 						<div class="footer_address_item">
 							<img src="images/icon/mail.svg" class="footer_address__marker">
@@ -201,7 +216,12 @@
 </script>
 <noscript><a href="https://www.livechatinc.com/chat-with/12424659/" rel="nofollow">Chat with us</a>, powered by <a href="https://www.livechatinc.com/?welcome" rel="noopener nofollow" target="_blank">LiveChat</a></noscript>
 <!-- End of LiveChat code -->
+  
+<!-- Start linkedine -->  	
+  <script type="text/javascript"> _linkedin_partner_id = "3293433"; window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || []; window._linkedin_data_partner_ids.push(_linkedin_partner_id); </script><script type="text/javascript"> (function(){var s = document.getElementsByTagName("script")[0]; var b = document.createElement("script"); b.type = "text/javascript";b.async = true; b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js"; s.parentNode.insertBefore(b, s);})(); </script> <noscript> <img height="1" width="1" style="display:none;" alt="" src="https://px.ads.linkedin.com/collect/?pid=3293433&fmt=gif" /> </noscript>
+  <!-- End linkedine -->
 
+<script src="/smetrics/metrics.js"></script>
 <script src="/templates/<?php echo $this->template; ?>/js/scripts.min.js"></script>
 <script src="/templates/<?php echo $this->template; ?>/js/custom.js"></script>
 </body>

@@ -8,9 +8,11 @@
  */
 
 defined('_JEXEC') or die;
-	
+
+
 	$linkRegisterModule = JModuleHelper::getModuleById('94');
 	$linkRegister = JModuleHelper::renderModule($linkRegisterModule);
+	
 ?>
 
 <div class="section platform_step_section">
@@ -52,7 +54,7 @@ defined('_JEXEC') or die;
 					</div>
 					<div class="mt-4">
 						<a href="<?= $linkRegister ?>" class="btn">Open Live Account</a>
-						<a href="<?= $linkRegister ?>" class="btn btn_transparent-accent">Open Demo Account</a>
+						<a href="/demo" class="btn btn_transparent-accent">Open Demo Account</a>   
 					</div>
 				</div>
 			</div>

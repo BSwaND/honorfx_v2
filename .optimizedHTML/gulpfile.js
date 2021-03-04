@@ -24,6 +24,31 @@ gulp.task('browser-sync', function() {
 });
 function bsReload(done) { browserSync.reload(); done(); };
 
+// Scripts & JS Libraries
+gulp.task('scripts', function() {
+	return gulp.src([
+		// 'node_modules/jquery/dist/jquery.min.js', // Optional jQuery plug-in (npm i --save-dev jquery)
+		'app/js/_libs.js', // JS libraries (all in one)
+		'node_modules/owl.carousel/dist/owl.carousel.js',
+		//'node_modules/smooth-scrollbar/dist/smooth-scrollbar.js',
+		'app/js/_custom.js', // Custom scripts. Always at the end
+	])
+		.pipe(concat('scripts.min.js'))
+		.pipe(uglify(
+			{
+				keep_classnames: false,
+				keep_fnames: false,
+				ie8: false,
+				module: false,
+				nameCache: null, // or specify a name cache object
+				safari10: true,  
+				toplevel: false,
+			}
+)) // Minify js (opt.)
+.pipe(gulp.dest('app/js'))
+		.pipe(browserSync.reload({ stream: true }))
+});
+
 // Custom Styles
 gulp.task('styles', function() {
 	return gulp.src('app/sass/**/*.sass')
@@ -39,21 +64,6 @@ gulp.task('styles', function() {
 	.pipe(cleancss( {level: { 1: { specialComments: 0 } } })) // Optional. Comment out when debugging
 	.pipe(gulp.dest('app/css'))
 	.pipe(browserSync.stream())
-});
-
-// Scripts & JS Libraries
-gulp.task('scripts', function() {
-	return gulp.src([
-		// 'node_modules/jquery/dist/jquery.min.js', // Optional jQuery plug-in (npm i --save-dev jquery)
-		'app/js/_libs.js', // JS libraries (all in one)
-		'node_modules/owl.carousel/dist/owl.carousel.js',
-		//'node_modules/smooth-scrollbar/dist/smooth-scrollbar.js',
-		'app/js/_custom.js', // Custom scripts. Always at the end
-		])
-	.pipe(concat('scripts.min.js'))
-	.pipe(uglify()) // Minify js (opt.)
-	.pipe(gulp.dest('app/js'))
-	.pipe(browserSync.reload({ stream: true }))
 });
 
 // Responsive Images
