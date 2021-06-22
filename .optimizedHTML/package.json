@@ -27,6 +27,7 @@
 		"animate.css": "^4.1.1",
 		"hamburgers": "^1.1.3",
 		"owl.carousel": "^2.3.4",
-		"smooth-scrollbar": "^8.6.0"
+		"smooth-scrollbar": "^8.6.0",
+		"swiper": "^6.7.0"
 	}
 }

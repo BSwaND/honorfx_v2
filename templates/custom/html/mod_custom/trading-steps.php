@@ -17,7 +17,7 @@ defined('_JEXEC') or die;
 
 <div class="section platform_step_section">
 	<div class="container">
-		<div class="h2">Start Trading in <span class="accent-color">4 steps</span></div>
+		<div class="h2"><?= JText::_('TPL_CUSTOM_MOD_CUSTOM_PLATFORM_STEP_TITLE') ?> <span class="accent-color"><?= JText::_('TPL_CUSTOM_MOD_CUSTOM_PLATFORM_STEP_TITLE_ACCENT') ?></span></div>
 		
 		<div class="">
 			<div class="row">
@@ -26,35 +26,35 @@ defined('_JEXEC') or die;
 						<div class="platform_platrading-step_item wow fadeInUp" data-wow-duration="1s">
 							<img class="platform_platrading-step__img" src="/images/platform/step-1.svg" alt="Start Trading">
 							<div class="platform_platrading-step_item_body">
-								<div class="platform_platrading-step_item__title">Register</div>
-								<div class="platform_platrading-step_item__text">Open your live trading account with HonorFX</div>
+								<div class="platform_platrading-step_item__title"><?= JText::_('TPL_CUSTOM_MOD_CUSTOM_PLATFORM_STEP_ONE_TITLE') ?></div>
+								<div class="platform_platrading-step_item__text"><?= JText::_('TPL_CUSTOM_MOD_CUSTOM_PLATFORM_STEP_ONE_TEXT') ?></div>
 							</div>
 						</div>
 						<div class="platform_platrading-step_item wow fadeInUp" data-wow-duration="1s">
 							<img class="platform_platrading-step__img" src="/images/platform/step-2.svg" alt="Start Trading">
 							<div class="platform_platrading-step_item_body">
-								<div class="platform_platrading-step_item__title">Verify</div>
-								<div class="platform_platrading-step_item__text">Upload your documents to verify your account</div>
+								<div class="platform_platrading-step_item__title"><?= JText::_('TPL_CUSTOM_MOD_CUSTOM_PLATFORM_STEP_TWO_TITLE') ?></div>
+								<div class="platform_platrading-step_item__text"><?= JText::_('TPL_CUSTOM_MOD_CUSTOM_PLATFORM_STEP_TWO_TEXT') ?></div>
 							</div>
 						</div>
 						<div class="platform_platrading-step_item wow fadeInUp" data-wow-duration="1s">
 							<img class="platform_platrading-step__img" src="/images/platform/step-3.svg" alt="Start Trading">
 							<div class="platform_platrading-step_item_body">
-								<div class="platform_platrading-step_item__title">Fund</div>
-								<div class="platform_platrading-step_item__text">Login to your Client Portal and Fund your account</div>
+								<div class="platform_platrading-step_item__title"><?= JText::_('TPL_CUSTOM_MOD_CUSTOM_PLATFORM_STEP_THREE_TITLE') ?></div>
+								<div class="platform_platrading-step_item__text"><?= JText::_('TPL_CUSTOM_MOD_CUSTOM_PLATFORM_STEP_THREE_TEXT') ?></div>
 							</div>
 						</div>
 						<div class="platform_platrading-step_item wow fadeInUp" data-wow-duration="1s">
 							<img class="platform_platrading-step__img" src="/images/platform/step-4.svg" alt="Start Trading">
 							<div class="platform_platrading-step_item_body">
-								<div class="platform_platrading-step_item__title">Trade</div>
-								<div class="platform_platrading-step_item__text">Start trading on more than 165 instruments</div>
+								<div class="platform_platrading-step_item__title"><?= JText::_('TPL_CUSTOM_MOD_CUSTOM_PLATFORM_STEP_FOUR_TITLE') ?></div>
+								<div class="platform_platrading-step_item__text"><?= JText::_('TPL_CUSTOM_MOD_CUSTOM_PLATFORM_STEP_FOUR_TEXT') ?></div>
 							</div>
 						</div>
 					</div>
 					<div class="mt-4">
-						<a href="<?= $linkRegister ?>" class="btn">Open Live Account</a>
-						<a href="/demo" class="btn btn_transparent-accent">Open Demo Account</a>   
+						<a href="<?= $linkRegister ?>" class="btn"><?= JText::_('TPL_CUSTOM_MOD_CUSTOM_OPEN_ACCOUNT_LIVE_BTN') ?></a>
+						<a href="/demo" class="btn btn_transparent-accent"><?= JText::_('TPL_CUSTOM_MOD_CUSTOM_OPEN_ACCOUNT_DEMO_BTN') ?></a>   
 					</div>
 				</div>
 			</div>

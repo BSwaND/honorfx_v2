@@ -8,9 +8,31 @@
 	 */
 	
 	defined( '_JEXEC' ) or die( 'Restricted access' );
-	
-	if (($this->error->getCode()) == '404') {
+  
+  $app = JFactory::getApplication();
+  $menu = $app->getMenu()->getActive();
+  $document = JFactory::getDocument();
+
+  
+//  $document->homePage =  ($document->language != 'en-gb') ? mb_substr($document->language,0,2) : null;
+//  if ($_COOKIE['currentLocalKey']){
+//    $document->homePage = '/'.$_COOKIE['currentLocalKey'] . $document->homePage;
+//  }
+  
+  
+  
+  $opts = array(
+    'http'=>array(
+      'method'=>"GET",
+      'header'=>"Accept-language: en\r\n" .
+        "Cookie: currentLocalKey=".$_COOKIE['currentLocalKey']
+    )
+  );
+  
+  $context = stream_context_create($opts);
+  
+  if (($this->error->getCode()) == '404') {
 		header("HTTP/1.1 404 Not Found");
-		echo file_get_contents(JURI::root() . 'page-404');
+		echo file_get_contents(JURI::root() . '/page-404', true, $context);
 		exit;
 	}

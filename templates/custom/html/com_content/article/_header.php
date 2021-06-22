@@ -8,6 +8,7 @@
 	$canEdit = $params->get('access-edit');
 	$user    = JFactory::getUser();
 	$info    = $params->get('info_block_position', 0);
+  $document = JFactory::getDocument();
 
 	$imageIntro 			= json_decode($this->item->images)->image_intro;
 	$imageIntroAtt 		= (json_decode($this->item->images)->image_intro_alt) ? json_decode($this->item->images)->image_intro_alt : $this->item->title ;
@@ -22,5 +23,6 @@
 	//вывод модуля внутри шаблона
 	jimport( 'joomla.application.module.helper' );
 	$attribs['style'] = 'none';
-
-	
+  
+  $document->scc = $this->item->jcfields[1]->rawvalue;
+  $document->js = $this->item->jcfields[2]->rawvalue;

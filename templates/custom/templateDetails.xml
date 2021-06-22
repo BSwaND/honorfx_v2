@@ -26,18 +26,35 @@
 		<folder>webfonts</folder>
 	</files>
 	<positions>
+		<position>switch_lange</position>
 		<position>nav_header</position>
 		<position>header</position>
 		<position>breadcrumbs</position>
 		<position>footer</position>
+		<position>footer_menu_company</position>
+		<position>footer_menu_trading</position>
+		<position>footer_menu_promotions</position>
 		<position>footer_social</position>
+		<position>pop_up</position>
 	</positions>
 	<languages folder="language">
+		<language tag="ar-AA">language/ar-AA/ar-AA.tpl_custom.ini</language>
+		<language tag="ar-AA">language/ar-AA/ar-AA.tpl_custom.sys.ini</language>
+		<language tag="de-DE">language/de-DE/de-DE.tpl_custom.ini</language>
+		<language tag="de-DE">language/de-DE/de-DE.tpl_custom.sys.ini</language>
 		<language tag="en-GB">language/en-GB/en-GB.tpl_custom.ini</language>
 		<language tag="en-GB">language/en-GB/en-GB.tpl_custom.sys.ini</language>
+		<language tag="es-ES">language/es-ES/es-ES.tpl_custom.ini</language>
+		<language tag="es-ES">language/es-ES/es-ES.tpl_custom.sys.ini</language>
+		<language tag="fr-FR">language/fr-FR/fr-FR.tpl_custom.ini</language>
+		<language tag="fr-FR">language/fr-FR/fr-FR.tpl_custom.sys.ini</language>
 		<language tag="ru-RU">language/ru-RU/ru-RU.tpl_custom.ini</language>
 		<language tag="ru-RU">language/ru-RU/ru-RU.tpl_custom.sys.ini</language>
+		<language tag="th-TH">language/th-TH/th-TH.tpl_custom.ini</language>
+		<language tag="th-TH">language/th-TH/th-TH.tpl_custom.sys.ini</language>
 		<language tag="uk-UA">language/uk-UA/uk-UA.tpl_custom.ini</language>
 		<language tag="uk-UA">language/uk-UA/uk-UA.tpl_custom.sys.ini</language>
+		<language tag="ur-PK">language/ur-PK/ur-PK.tpl_custom.ini</language>
+		<language tag="ur-PK">language/ur-PK/ur-PK.tpl_custom.sys.ini</language>
 	</languages>
 </extension>

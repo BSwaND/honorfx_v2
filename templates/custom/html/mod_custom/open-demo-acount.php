@@ -19,47 +19,51 @@ defined('_JEXEC') or die;
 	
 	<div class="section about_open-account">
 		<div class="container">
-			<h2 class="h2">Open Live Acount or <br /><span class="accent-color">Demo Acount</span></h2>
-			<div class="section_descript">Unlock your trading potential</div>
+			<h2 class="h2"><?= JText::_('TPL_CUSTOM_MOD_CUSTOM_OPEN_ACCOUNT_TITLE') ?> <br /><span class="accent-color"><?= JText::_('TPL_CUSTOM_MOD_CUSTOM_OPEN_ACCOUNT_TITLE_ACCENT') ?></span></h2>
+			<div class="section_descript"><?= JText::_('TPL_CUSTOM_MOD_CUSTOM_OPEN_ACCOUNT_SUB_TITLE') ?></div>
 			<div class="about_open-account_wrapper-card wow fadeInUp" data-wow-duration="2s">
 				<div class="row">
 					<div class="col-md-4">
 						<div class="about_open-account_card">
-							<div class="about_open-account_card__title">FOR NEW TRADERS</div>
+							<div class="about_open-account_card__title"><?= JText::_('TPL_CUSTOM_MOD_CUSTOM_OPEN_ACCOUNT_FOR_NEW') ?></div>
 							<ul class="ul_custom">
-								<li class="ul_custom__li">Start Trading with Micro lots</li>
-								<li class="ul_custom__li">Discover MT4/MT5 Platform</li>
-								<li class="ul_custom__li">No minimum deposit</li>
-								<li class="ul_custom__li">Use leverage upto 1:500</li>
-								<li class="ul_custom__li">Access Free Trading Education</li>
+								<li class="ul_custom__li"><?= JText::_('TPL_CUSTOM_MOD_CUSTOM_OPEN_ACCOUNT_FOR_NEW_LI_1') ?></li>
+								<li class="ul_custom__li"><?= JText::_('TPL_CUSTOM_MOD_CUSTOM_OPEN_ACCOUNT_FOR_NEW_LI_2') ?></li>
+								<li class="ul_custom__li"><?= JText::_('TPL_CUSTOM_MOD_CUSTOM_OPEN_ACCOUNT_FOR_NEW_LI_3') ?></li>
+								<li class="ul_custom__li"><?= JText::_('TPL_CUSTOM_MOD_CUSTOM_OPEN_ACCOUNT_FOR_NEW_LI_4') ?></li>
+								<li class="ul_custom__li"><?= JText::_('TPL_CUSTOM_MOD_CUSTOM_OPEN_ACCOUNT_FOR_NEW_LI_5') ?></li>
 							</ul>
-							<div class="about_open-account_card_footer"><a class="btn btn_card" href="<?= $linkRegister ?>">open Live Account</a></div>
+							<div class="about_open-account_card_footer">
+								<a class="btn btn_card" href="index.php?option=com_content&view=article&id=8">
+									<?= JText::_('TPL_CUSTOM_MOD_CUSTOM_OPEN_ACCOUNT_DEMO_BTN') ?>
+								</a>
+							</div>
 						</div>
 					</div>
 					<div class="col-md-4">
 						<div class="about_open-account_card">
-							<div class="about_open-account_card__title">FOR EXPERIENCED TRADERS</div>
+							<div class="about_open-account_card__title"><?= JText::_('TPL_CUSTOM_MOD_CUSTOM_OPEN_ACCOUNT_FOR_EXPERIENCED') ?></div>
 							<ul class="ul_custom">
-								<li class="ul_custom__li">Advanced Trading Tools</li>
-								<li class="ul_custom__li">Fast, Automated Execution</li>
-								<li class="ul_custom__li">Tight Spreads</li>
-								<li class="ul_custom__li">Tier 1 Liquidity</li>
-								<li class="ul_custom__li">Expert News &amp; Analysis</li>
+								<li class="ul_custom__li"><?= JText::_('TPL_CUSTOM_MOD_CUSTOM_OPEN_ACCOUNT_FOR_EXPERIENCED_LI_1') ?></li>
+								<li class="ul_custom__li"><?= JText::_('TPL_CUSTOM_MOD_CUSTOM_OPEN_ACCOUNT_FOR_EXPERIENCED_LI_2') ?></li>
+								<li class="ul_custom__li"><?= JText::_('TPL_CUSTOM_MOD_CUSTOM_OPEN_ACCOUNT_FOR_EXPERIENCED_LI_3') ?></li>
+								<li class="ul_custom__li"><?= JText::_('TPL_CUSTOM_MOD_CUSTOM_OPEN_ACCOUNT_FOR_EXPERIENCED_LI_4') ?></li>
+								<li class="ul_custom__li"><?= JText::_('TPL_CUSTOM_MOD_CUSTOM_OPEN_ACCOUNT_FOR_EXPERIENCED_LI_5') ?></li>
 							</ul>
-							<div class="about_open-account_card_footer"><a class="btn btn_card" href="<?= $linkRegister ?>">open Live Account</a></div>
+							<div class="about_open-account_card_footer"><a class="btn btn_card" href="<?= $linkRegister ?>"><?= JText::_('TPL_CUSTOM_MOD_CUSTOM_OPEN_ACCOUNT_LIVE_BTN') ?></a></div>
 						</div>
 					</div>
 					<div class="col-md-4">
 						<div class="about_open-account_card">
-							<div class="about_open-account_card__title">FOR INTRODUCING BROKERS</div>
+							<div class="about_open-account_card__title"><?= JText::_('TPL_CUSTOM_MOD_CUSTOM_OPEN_ACCOUNT_FOR_INTRODUCING') ?></div>
 							<ul class="ul_custom">
-								<li class="ul_custom__li">Customized Rebate Scheme</li>
-								<li class="ul_custom__li">Increase Your Income</li>
-								<li class="ul_custom__li">Dedicated Partner Support</li>
-								<li class="ul_custom__li">Expert Account Managers</li>
-								<li class="ul_custom__li">Exclusive Promotional Material</li>
+								<li class="ul_custom__li"><?= JText::_('TPL_CUSTOM_MOD_CUSTOM_OPEN_ACCOUNT_FOR_INTRODUCING_LI_1') ?></li>
+								<li class="ul_custom__li"><?= JText::_('TPL_CUSTOM_MOD_CUSTOM_OPEN_ACCOUNT_FOR_INTRODUCING_LI_2') ?></li>
+								<li class="ul_custom__li"><?= JText::_('TPL_CUSTOM_MOD_CUSTOM_OPEN_ACCOUNT_FOR_INTRODUCING_LI_3') ?></li>
+								<li class="ul_custom__li"><?= JText::_('TPL_CUSTOM_MOD_CUSTOM_OPEN_ACCOUNT_FOR_INTRODUCING_LI_4') ?></li>
+								<li class="ul_custom__li"><?= JText::_('TPL_CUSTOM_MOD_CUSTOM_OPEN_ACCOUNT_FOR_INTRODUCING_LI_5') ?></li>
 							</ul>
-							<div class="about_open-account_card_footer"><a class="btn btn_card" href="<?= $linkRegister ?>">open Live Account</a></div>
+							<div class="about_open-account_card_footer"><a class="btn btn_card" href="<?= $linkRegister ?>"><?= JText::_('TPL_CUSTOM_MOD_CUSTOM_OPEN_ACCOUNT_LIVE_BTN') ?></a></div>
 						</div>
 					</div>
 				</div>

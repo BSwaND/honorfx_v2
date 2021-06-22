@@ -1,0 +1,307 @@
+body {
+    direction: rtl;
+    text-align: right;
+}
+
+.header_control {
+    text-align: left;
+}
+
+.header_logo {
+    padding: 0 0 0 40px;
+}
+
+.header_nav a {
+    padding: 20px 0px 20px 20px;
+    margin: 0 0 0 25px;
+}
+
+.header_nav a:after {
+    left: inherit;
+    right: 0;
+}
+
+.bg-main {
+    background: url('/images/accounts/hon-logo.svg') no-repeat -70px/360px;
+}
+
+.main-screen_main-img {
+    transform: scaleX(-1);
+}
+
+.btn_card__lite:after {
+    right: inherit;
+    left: -20px;
+}
+
+.our-platform_card_item_body ul {
+    text-align: right;
+}
+
+.section_why .offset-md-1.col-md-10 {
+    margin-right: 8.33333%;
+}
+
+.why_card_item:after {
+    right: inherit;
+    left: 0;
+}
+
+.trad-steps_item__int::after {
+    transform: translateX(-50%);
+    right: inherit;
+    left: 0;
+}
+
+.footer_address_item:first-child {
+    margin-right: 0;
+}
+
+.platform-new-design .our-platform__link {
+    margin-left: 20px;
+    margin-right: 0;
+}
+
+.menu__links-list {
+    padding-right: 0;
+}
+
+.footer__contacts-container {
+    margin-right: 0;
+    margin-left: 40px;
+}
+
+.footer-brand-link {
+    margin-left: 0;
+    margin-right: 40px;
+}
+
+.footer_sub .offset-0.offset-lg-2.col-lg-8 {
+    margin-left: 16.66667%;
+    margin-right: 16.66667%;
+}
+
+.footer__info {
+    padding-left: 10px;
+    padding-right: 0;
+}
+
+.btn-up {
+    right: inherit;
+    left: 25px;
+}
+
+#chat-widget-container {
+    right: inherit !important;
+    left: 14px !important;
+}
+
+.about_section .offset-0.offset-lg-1 {
+    margin-left: 0;
+    margin-right: 8.33333%;
+}
+
+.line-accent-left {
+    border-right: 2px solid #ee743b;
+    padding-right: 10px;
+    padding-left: 0;
+    border-left: none;
+}
+
+.about_open-account_card__title {
+    text-align: right;
+}
+
+.ul_custom {
+    text-align: right;
+}
+
+.ul_custom__li {
+    padding-left: 0;
+    padding-right: 20px;
+}
+
+.ul_custom__li:before {
+    left: inherit;
+    right: 0;
+}
+
+.pop-up__container {
+    right: 50%;
+    transform: translate(50%,-50%);
+}
+
+.pop-up__container::after {
+    right: inherit;
+    transform: scaleX(-1) translateX(40px);
+}
+
+.pop-up__content {
+    padding-right: 46px;
+    padding-left: 0;
+}
+
+.pop-up__text {
+    padding-right: 129px;
+    padding-left: 0;
+}
+
+.pop-up__text::before {
+    left: inherit;
+    right: 0;
+}
+
+.platform_wrapper .platform_item .text-center img {
+    transform: scaleX(-1);
+}
+
+.table-platform .table-custom_col_body_th {
+    margin-right: 0;
+    margin-left: 4px;
+    padding-left: 15px;
+    padding-right: 40px;
+}
+
+.section.bg-grey .table-desktop {
+    margin-left: 0;
+    margin-right: 8.33333%;
+}
+
+.payment_section>.container {
+    justify-content: flex-start;
+}
+
+.switch {
+    left: inherit;
+    right: calc(50% - 184px);
+}
+
+.payment .slider:before {
+    left: inherit;
+    right: 0;
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(-190px);
+    -ms-transform: translateX(-190px);
+    transform: translateX(-190px);
+}
+
+.lang_block img {
+    margin-right: 0;
+    margin-left: 10px;
+}
+
+.download-dashboard_body__col:first-child {
+    border-left: 1px solid #f19062;
+    border-right: none;
+}
+
+.row_title,
+.row_content {
+    padding-left: 0;
+    padding-right: 32px;
+}
+
+.time_icon {
+    padding-left: 0;
+    padding-right: 28px;
+}
+
+.time_icon::before {
+    left: inherit;
+    right: 5px;
+}
+
+.info_box:not(:last-child) {
+    margin-right: 0;
+    margin-left: 28px;
+}
+
+.visit_item_wrapper {
+    max-width: 720px;
+}
+
+.contact-us__slider .ctm-btns__origin {
+    transform: rotate(180deg);
+}
+
+@media (max-width: 768px) {
+    .bg-main {
+        background: url('/images/accounts/hon-logo.svg') no-repeat -100px;
+        background-size: contain;
+    }
+    .section_why .offset-md-1.col-md-10 {
+        margin-right: 0;
+    }
+    .card-trade {
+        padding-right: 30px;
+    }
+    .our-platform_card_item_body p {
+        text-align: right;
+    }
+    .footer-brand-link {
+        margin-right: 0;
+    }
+    .section.bg-grey .table-desktop {
+        margin-right: 0;
+    }
+    .info_box:not(:last-child) {
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 533px) {
+    .header_control {
+        text-align: center;
+    }
+    .main-screen_main-img {
+        transform: scaleX(-1) !important;
+    }
+    .header_control__btn-hamburger {
+        -webkit-transform: translateX(10px);
+        -ms-transform: translateX(10px);
+        transform: translateX(10px);
+    }
+    .header_nav {
+        background: #fff url('/images/accounts/hon-logo.svg') no-repeat -70px;
+    }
+    .bg-main {
+        background-size: 80%;
+        background-position-y: top;
+    }
+    .accounts-provide_item_body {
+        text-align: right;
+    }
+    .our-platform_card_item .btn_card:after {
+        right: inherit;
+    }
+    .card-trade__text {
+        padding-right: 15px;
+        padding-left: 0;
+    }
+    .footer__module-container {
+        margin-right: 0;
+        margin-left: 55px;
+    }
+    .footer__info {
+        padding-right: 0;
+        padding-left: 30px;
+    }
+    .about_section .offset-0.offset-lg-1 {
+        margin-right: 0;
+    }
+    input:checked+.slider:before {
+        -webkit-transform: translateX(-125px);
+    -ms-transform: translateX(-125px);
+    transform: translateX(-125px);
+    }
+    .table-mob .table-lite_td {
+        padding-right: 10px;
+        padding-left: 50px;
+    }
+    .accordion-box .address__title::after {
+        right: inherit;
+        left: 0;
+    }
+}
